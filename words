@@ -1,0 +1,13 @@
+import "package:flutter/material.dart";
+
+class Words extends StatelessWidget {
+  final String mainText;
+  Words(this.mainText);
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      mainText,
+      style: TextStyle(fontSize: 30),
+    );
+  }
+}
