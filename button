@@ -1,0 +1,33 @@
+import 'package:assignment1/words.dart';
+import "package:flutter/material.dart";
+
+class Button extends StatefulWidget {
+  @override
+  _ButtonState createState() => _ButtonState();
+}
+
+class _ButtonState extends State<Button> {
+  var text = ["this is page1", "this is page 2"];
+  var textIndex = 0;
+
+  void changeText() {
+    setState(() {
+      if (textIndex == 0) {
+        textIndex = 1;
+      } else {
+        textIndex = 0;
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      RaisedButton(
+        onPressed: changeText,
+        child: Text("change Page"),
+      ),
+      Words(text[textIndex]),
+    ]);
+  }
+}
