@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import './button.dart';
+
+void main() => runApp(assignment1());
+
+class assignment1 extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _AssignmentState();
+}
+
+class _AssignmentState extends State<assignment1> {
+  int page = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Assignment 1"),
+        ),
+        body: Column(
+          children: [
+            Button(),
+          ],
+        ),
+      ),
+    );
+  }
+}
